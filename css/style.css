@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-image: url('../img/wallpaper.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.h {
+    min-height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid DarkGray;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img100 img{
+width: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(169, 169, 169, 1);
+  transition: all .9s ease;
+  text-decoration: none;
+  font-size: 18px;
+  filter: grayscale(0.8);
+  transition: 1s;
+}
+
+a:hover {
+  color: rgba(255,255,255,1);
+  text-shadow: grey 0px 1px, grey 0px 1px;
+  transform: scale(1.05);
+  filter: grayscale(0);
+  background-color: rgba(0,0,0,0.5);
+}
+
+.p {
+  min-height: 90vh;
+}
+
+.in_p {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.f {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-top: 2px solid DarkGray;
+    min-height: 100px;
+    width: 100%;
+    padding: 50px;
+}
+
+.in_f {
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.box200 {
+    height: 180px;
+    width: 220px;
+    border-radius: 20px;
+    border: 2px solid DarkGray;
+    color: rgba(169, 169, 169, 1);
+    margin: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.box200 img {
+height: 150px;
+}
+
+.box200 h4 {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-top: 2px solid DarkGray;
+}
+
+button {
+    width:30px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: rgba(169,169,169,1);
+    margin: 0 10px;
+}
+
+input {
+    width:200px;
+    height:15px;
+}
+
+.box90 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  height: 120px;
+  width: 90%;
+  overflow: hidden;
+  border: 2px solid DarkGray;
+  position: relative;
+  margin: 20px auto;
+}
+
+.in_box90 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  height:40px;
+  width: 80%;
+  border-radius: 10px;
+  border: 2px solid DarkGray;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.line30 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(169, 169, 169, 1);
+    width: 100%;
+    min-height: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 2px solid DarkGray;
+    border-top: 2px solid DarkGray;
+}
+
+.in_p {
+    position: relative;
+}
+
+.content {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(169, 169, 169, 1);
+    font-size: 18px;
+    padding: 20px;
+}
+
+.content:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.box300 {
+    width:250px;
+    height:250px;
+    border: 2px solid DarkGray;
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 1);
+}
+
+.radiobox {
+    width:250px;
+    height:250px;
+    border: 2px solid DarkGray;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 1);
+    top: 10px;
+    left: 10px;
+    position: absolute;
+}

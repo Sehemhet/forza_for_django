@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+	<link type="text/css" href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="h">
+        <div class="img100">
+            <img src="img/logo.png" alt="">
+        </div>
+
+          <a href="index.html">Главная</a>
+          <a href="news.html">Новости</a>
+    <!--    {% if request.user.is_authenticated %}-->
+          <a href="{% url 'garage' %}">Гараж</a>
+    <!--    {% endif %}-->
+
+        <div>
+          <form action="{% url 'search' %}" method="get">
+            <input type="search" name="q" placeholder="Введите авто">
+            <button type="submit" name="submit" value="Искать">
+          </form>
+        </div>
+
+        <div>
+    <!--        {% if request.user.is_authenticated %}-->
+                <a href="{% url 'home' %}">{{ user.username }}</a> | <a href="{% url 'logout' %}">Выйти</a>
+    <!--        {% else %}-->
+                <a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'login' %}">Вход</a>
+    <!--        {% endif %}-->
+        </div>
+    </div>
+
+        <div class="p">
+            <div class="line30">
+              <h3> Porsche 911 2020</h3>
+            </div>
+                <div class="in_p">
+                    <img src="./img/car/porsche.webp">
+                        <div class="line30">
+          <div class="car_mini_block" style="background-color:green">
+            <h4>{{ car.level }}</h4>
+          </div>
+          <div class="car_mini_block" style="background-color:grey">
+            <h4>{{car.type_drive}}</h4>
+          </div>
+          <div class="car_mini_block" style="background-color:gold">
+            <h4>{{car.rarity}}</h4>
+          </div>
+          <div class="car_mini_block" style="background-color:green">
+            <h4>{{car.price}}</h4>
+          </div>                        </div>
+                    <div class="line30">
+                        <div class="box300">
+                          <table>
+                            <tr>
+                              <td>Скорость</td><td>{{car.speed}}</td>
+                            </tr>
+                            <tr>
+                              <td>Управляемость</td><td>{{car.control}}</td>
+                            </tr>
+                            <tr>
+                              <td>Ускорение</td><td>{{car.acceleration}}</td>
+                            </tr>
+                            <tr>
+                              <td>Разгон</td><td>{{car.start}}</td>
+                            </tr>
+                            <tr>
+                              <td>Торможение</td><td>{{car.brake}}</td>
+                            </tr>
+                          </table>
+                        </div>
+                        <div class="box300">
+                            <table>
+                              <tr>
+                                <td>Мощность кВт</td><td>{{car.kW}}</td>
+                              </tr>
+                              <tr>
+                                <td>Мощность Л.с.</td><td>{{car.Hp}}</td>
+                              </tr>
+                              <tr>
+                                <td>Крутящий момент</td><td>{{car.Hm}} n*m</td>
+                              </tr>
+                              <tr>
+                                <td>Вес</td><td>{{car.weight}} Кг</td>
+                              </tr>
+                              <tr>
+                                <td>Мощность / Масса </td><td> НЕТ / 1 кг</td>
+                              </tr>
+                              <tr>
+                                <td>Фронтальная нагрузка</td><td>{{car.center}}</td>
+                              </tr>
+                              <tr>
+                                <td>Объем двигателя</td><td>{{ car.volume }} см³</td>
+                              </tr>
+                            </table>
+                        </div>
+                        <div class="box300">
+                            <table>
+                              <tr>
+                                <td>Скорость</td><td>{{car.top_speed}} км/ч</td>
+                              </tr>
+                              <tr>
+                                <td>Ускорение 0-97км/ч</td><td>{{car.start097}}</td>
+                              </tr>
+                              <tr>
+                                <td>Ускорение 0-161км/ч</td><td>{{car.start161}}</td>
+                              </tr>
+                            </table>
+                        </div>
+                        <div class="box300">
+                            <table>
+                              <tr>
+                                <td>Торможение 97-0 км/ч</td><td>{{car.brake097}}</td>
+                              </tr>
+                              <tr>
+                                <td>Торможение 161-0 км/ч</td><td>{{car.brake161}}</td>
+                              </tr>
+                              <tr>
+                                <td>97 км/ч</td><td>{{car.load97}}г</td>
+                              </tr>
+                              <tr>
+                                <td>193 км/ч</td><td>{{car.load193}}г</td>
+                              </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+        </div>
+    <div class="f">
+        <div class="in_f">
+
+          <a class="box200" href="{{ el.url }}">
+              <div class="">
+                  <img src="img/partner/Armroker2.jpeg" alt="">
+                  <h4>{{ el.name }}</h4>
+              </div>
+          </a>
+
+          <a class="box200" href="{{ el.url }}">
+              <div class="">
+                  <img src="img/partner/forza.png" alt="">
+                  <h4>{{ el.name }}</h4>
+              </div>
+          </a>
+
+          <a class="box200" href="{{ el.url }}">
+              <div class="">
+                  <img src="img/partner/steam.png" alt="">
+                  <h4>{{ el.name }}</h4>
+              </div>
+          </a>
+
+          <a class="box200" href="{{ el.url }}">
+              <div class="">
+                  <img src="img/partner/twitter.png" alt="">
+                  <h4>{{ el.name }}</h4>
+              </div>
+          </a>
+
+        </div>
+
+        <div class="line30">
+          <h4>© 2023 Andrew Volk. All Rights Reserved.</h4>
+        </div>
+
+    </div>
+</body>
+</html>

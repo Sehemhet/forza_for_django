@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+	<link type="text/css" href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="h">
+        <div class="img100">
+            <img src="img/logo.png" alt="">
+        </div>
+
+          <a href="index.html">Главная</a>
+          <a href="news.html">Новости</a>
+    <!--    {% if request.user.is_authenticated %}-->
+          <a href="{% url 'garage' %}">Гараж</a>
+    <!--    {% endif %}-->
+
+        <div>
+          <form action="{% url 'search' %}" method="get">
+            <input type="search" name="q" placeholder="Введите авто">
+            <button type="submit" name="submit" value="Искать">
+          </form>
+        </div>
+
+        <div>
+    <!--        {% if request.user.is_authenticated %}-->
+                <a href="{% url 'home' %}">{{ user.username }}</a> | <a href="{% url 'logout' %}">Выйти</a>
+    <!--        {% else %}-->
+                <a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'login' %}">Вход</a>
+    <!--        {% endif %}-->
+        </div>
+    </div>
+
+    <div class="p">
+        <div class="line30">
+          <h3> This is map </h3>
+        </div>
+        <div class="in_p">
+            <img src="./img/mapb.jpg" width="100%">
+            <div class="radiobox">
+                Дома<input type="checkbox">
+                Гонки<input type="checkbox">
+                <label>Стенды<input type="checkbox"></label>
+                <label>Гараж<input type="checkbox"></label>
+                <label>Радар<input type="checkbox"></label>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="f">
+        <div class="in_f">
+
+          <a class="box200" href="{{ el.url }}">
+              <div class="">
+                  <img src="img/partner/Armroker2.jpeg" alt="">
+                  <h4>{{ el.name }}</h4>
+              </div>
+          </a>
+
+          <a class="box200" href="{{ el.url }}">
+              <div class="">
+                  <img src="img/partner/forza.png" alt="">
+                  <h4>{{ el.name }}</h4>
+              </div>
+          </a>
+
+          <a class="box200" href="{{ el.url }}">
+              <div class="">
+                  <img src="img/partner/steam.png" alt="">
+                  <h4>{{ el.name }}</h4>
+              </div>
+          </a>
+
+          <a class="box200" href="{{ el.url }}">
+              <div class="">
+                  <img src="img/partner/twitter.png" alt="">
+                  <h4>{{ el.name }}</h4>
+              </div>
+          </a>
+
+        </div>
+
+        <div class="line30">
+          <h4>© 2023 Andrew Volk. All Rights Reserved.</h4>
+        </div>
+
+    </div>
+</body>
+</html>
